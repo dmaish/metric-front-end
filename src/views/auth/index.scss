@@ -1,0 +1,30 @@
+.auth-modal {
+    position: relative;
+    background-color: white;
+    margin: 0 auto;
+    z-index: 5;
+    width: 70vw;
+    height: 75%;
+    left: 33vw;
+    top: 47%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 3px;
+    
+
+    .register-div{
+        position: relative;
+        display: grid;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 5;
+        background-color: blue;
+        left: 50%;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+        background-image: linear-gradient(to right bottom, #05f7d2, #1c95e6, #4e32f1, #3f0acf);  
+        // background-image: linear-gradient(to right bottom, #8356fd, #0096ff, #00c0ff, #00dffb, #05f7d2);
+}
+}

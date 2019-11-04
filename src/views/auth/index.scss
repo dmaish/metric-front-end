@@ -13,18 +13,74 @@
     border-radius: 3px;
     
 
-    .register-div{
+    .auth-div{
         position: relative;
-        display: grid;
         top: 0;
         width: 50%;
         height: 100%;
         z-index: 5;
-        background-color: blue;
         left: 50%;
         border-bottom-right-radius: 3px;
         border-top-right-radius: 3px;
-        background-image: linear-gradient(to right bottom, #05f7d2, #1c95e6, #4e32f1, #3f0acf);  
+        background: linear-gradient(to right bottom, rgba(5,247,210, 0.85) , rgba(43, 159, 236, 0.8), rgba(47,70,228,0.8), rgba(78,50,241,1));  
         // background-image: linear-gradient(to right bottom, #8356fd, #0096ff, #00c0ff, #00dffb, #05f7d2);
-}
+    }
+
+    .register-div {
+        position: relative;
+        top: 10%;
+        .title {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+        .tagline {
+            color: #ffffff;
+            text-align: center;
+            font-size: 15px;
+            font-style: italic;
+        }
+        .input-container {
+            text-align: center;
+            margin-top: 6%;
+        }
+        input {
+            width: 67%;
+            background: none;
+            margin: 0 auto;
+            font-size: 15px;
+            color: #ffffff;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #ffffff;
+            padding-left: 20px;
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #ffffff;
+            opacity: 0.6; /* Firefox */
+        }
+        button {
+            width: 67%;
+            height: 50px;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 15px;
+            background: none;
+        }
+        .auth-button {
+            background-image: linear-gradient(to right,  #57d8f7, #03EDC9);
+        }
+        .google-button {
+            border: 1px solid #ffffff;
+        }
+        .horizontal-line {
+            width: 45%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
 }

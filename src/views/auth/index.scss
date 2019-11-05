@@ -22,11 +22,11 @@
         left: 50%;
         border-bottom-right-radius: 3px;
         border-top-right-radius: 3px;
-        background: linear-gradient(to right bottom, rgba(5,247,210, 0.85) , rgba(43, 159, 236, 0.8), rgba(47,70,228,0.8), rgba(78,50,241,1));  
+        background: linear-gradient(to right bottom, rgba(0, 247, 210, 0.7) , rgba(43, 159, 236, 0.8), rgba(47,70,228,0.8), rgba(78,50,241,1));  
         // background-image: linear-gradient(to right bottom, #8356fd, #0096ff, #00c0ff, #00dffb, #05f7d2);
     }
 
-    .register-div {
+    .register-div, .login-div {
         position: relative;
         top: 10%;
         .title {
@@ -54,12 +54,20 @@
             outline: none;
             border: none;
             border-bottom: 1px solid #ffffff;
-            padding-left: 20px;
+            padding-left: 10px;
+            font-size: 15px;
+            padding-bottom: 5px;
         }
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: #ffffff;
             opacity: 0.6; /* Firefox */
         }
+
+        i {
+            color: #ffffff;
+            font-size: 20px;
+        }
+
         button {
             width: 67%;
             height: 50px;
@@ -70,6 +78,7 @@
             cursor: pointer;
             font-size: 15px;
             background: none;
+            text-align: center;
         }
         .auth-button {
             background-image: linear-gradient(to right,  #57d8f7, #03EDC9);
@@ -77,10 +86,26 @@
         .google-button {
             border: 1px solid #ffffff;
         }
-        .horizontal-line {
+        .horizontal-line-left {
+            height: 1px;
             width: 45%;
             display: inline-block;
             vertical-align: middle;
+            background-color: #E6E6E6;
+            background: linear-gradient(90deg, rgba(43, 159, 236, 0.01) 5%, white);
         }
+        .horizontal-line-right {
+            height: 1px;
+            width: 45%;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #E6E6E6;
+            background: linear-gradient(90deg,  white, rgba(43, 159, 236, 0.01) 95%);
+        }
+    }
+    img {
+        height: 20px;
+        width: 20px;
+        vertical-align: middle;
     }
 }

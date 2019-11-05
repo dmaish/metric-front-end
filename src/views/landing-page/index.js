@@ -18,6 +18,18 @@ const styles = {
 }
 
 export default class LandingPage extends Component {
+    state = {
+        authPageVisibility : false,
+        userRegistration: true,
+    }
+
+    authActionFunc = (registration=true) => {
+
+        if (registration === false){
+            this.setState(() => ({userRegistration: false}));
+        }
+        this.setState(() => ({authPageVisibility: true}));
+    }
 
     render (){
         return(
@@ -34,8 +46,8 @@ export default class LandingPage extends Component {
                                 </div>
                         </div>
                         <div className="action-btns">
-                                <div className="register-btn">Register</div>
-                                <div className="login-btn">Login</div>
+                                <button className="register-btn" onClick={() => (this.authActionFunc())}>Register</button>
+                                <div className="login-btn" onClick={() => (this.authActionFunc(false))}>Login</div>
                         </div>
                         </div>
                     </div>
@@ -43,8 +55,8 @@ export default class LandingPage extends Component {
                 
             </div>
 
-            <div className="auth-container">
-            <Auth />
+            <div className={`auth-container-${this.state.authPageVisibility}`}>
+                <Auth userRegistration={this.state.userRegistration}/>
             </div>
             </>
         );

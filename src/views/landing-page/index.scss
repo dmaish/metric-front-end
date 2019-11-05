@@ -8,7 +8,7 @@
         "social-links";
     grid-template-columns: 1fr;
     grid-template-rows: 10% 80% 10% ;
-    // overflow: hidden;
+    overflow: hidden;
 
 
     .logo {
@@ -84,6 +84,7 @@
             border-radius: 40px;
             margin: 0 auto;
             cursor: pointer;
+            font-style: oblique;
         }
 
         .login-btn {
@@ -94,6 +95,7 @@
                     margin: 0 auto;        
                     color: #6A4CAD;
                     cursor: pointer;
+                    font-style: oblique;
                 }
     }
 
@@ -139,19 +141,31 @@
         .action-btns {
             top: 35%;
             left: -117%;
+            font-size: 16px;
+
+            .register-btn {
+                font-size: 16px;
+                outline: none;
+                border: none;
+            }
         }
 
     }
 
 }
 
-.auth-container {
+.auth-container-true {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 2;
     top: 0%;
     background-color: rgba(128, 128, 128, 0.9);
+
+}
+
+.auth-container-false {
+    visibility: hidden;
 }
 
 

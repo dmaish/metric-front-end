@@ -1,6 +1,6 @@
 .landing-page {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-areas: 
         "logo"
@@ -8,7 +8,6 @@
         "social-links";
     grid-template-columns: 1fr;
     grid-template-rows: 10% 80% 10% ;
-    overflow: hidden;
 
 
     .logo {
@@ -24,29 +23,6 @@
     .path-div {
         grid-area: path-div;
         background-repeat: no-repeat;
-        background-position: right;
-        background-size: 130% ;
-
-        .outer-circle {
-            position: relative;
-            width:120%;
-            height: 90%;
-            background-repeat: no-repeat;
-            background-position: 231%;
-            background-size: 110%;
-            z-index: 1;
-
-            .inner-circle {
-                position: relative;
-                top: 15%;
-                width: 85%;
-                height: 80%;
-                background-repeat: no-repeat;
-                background-position: 360%;
-                background-size: 106%;
-                z-index: 2;
-            }
-        }
         
     }
 
@@ -112,34 +88,34 @@
             ". path-div";
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 10% 90% ;
-        overflow: hidden;
+
+        .logo {
+            display: inline-block;
+        }
 
         .path-div {
             background-size: contain ;
-            background-position: 0% 20%;
-
-            .outer-circle {
-                background-size: 65%;
-                background-position: 70% 20%;
-
-                .inner-circle{
-                    background-position: 190% 5%;
-                    background-size: 90% 60%;
-                }
-            }
+            // background-color: blue;
+            display: inline-block;
+            background-size: 100%;
+            background-position: 5.5vh 0%;
         }
 
         .phrase{
             position: relative;
             grid-area: content;
             left: -90%;
-            top: 25%;
+            top: 37%;
             font-size: 1.5em;
-            text-align: left;
+            text-align: left;;
+
+            .small-phrase {
+                font-style: oblique;
+            }
         }
 
         .action-btns {
-            top: 35%;
+            top: 40%;
             left: -117%;
             font-size: 16px;
 
@@ -161,6 +137,19 @@
     z-index: 2;
     top: 0%;
     background-color: rgba(128, 128, 128, 0.9);
+
+    .cancel-button {
+        position: relative;
+        display: inline-block;
+        left: 100%;
+        top: -80vh;
+        font-size: 2em;
+        cursor: pointer;
+        color: rgb(191, 241, 234);
+    }
+    .cancel-button:hover{
+        color: #ffffff;
+    }
 
 }
 

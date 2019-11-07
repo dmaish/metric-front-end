@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './index.scss'
-import authModalBackground from './../../assets/modal-BG-xd.svg';
+import registerModalBackground from './../../assets/registerPageBG.svg';
+import loginModalBackground from './../../assets/loginPageBG.svg';
 import googleIcon from '../../assets/google.png';
 
 const styles = {
-    modalBackground: {
-        backgroundImage: `url(${authModalBackground})`
+    register_modal_true: {
+        backgroundImage: `url(${registerModalBackground})`
+    },
+    register_modal_false: {
+        backgroundImage: `url(${loginModalBackground})`
     }
 }
 
@@ -16,9 +20,9 @@ class Auth extends Component {
     }
     render() {
         const userRegistration = this.props.userRegistration;
-        console.log('user registration>>>>>>>', userRegistration);
+        let modalBackground = `register_modal_${userRegistration}`;
         return (
-                <div id="auth" style={styles.modalBackground} className="auth-modal">
+                <div id="auth" style={styles[modalBackground]} className="auth-modal">
                     <div className="auth-div">
                         {userRegistration ? ( <div className="register-div">
                                 <div className="title">
@@ -51,10 +55,13 @@ class Auth extends Component {
                                 </div>
                                 <div className="input-container">
                                     <button className="google-button">
-                                        <img src={googleIcon} alt='icon'/> GOOGLE
+                                        <img src={googleIcon} alt='icon'/>
+                                        GOOGLE
                                     </button>
                                 </div>
-                            </div>)  : (<div className="login-div">
+                            </div>
+                            )  : 
+                    (<div className="login-div">
                         <div className="title">
                                 LOGIN
                         </div>
@@ -85,9 +92,11 @@ class Auth extends Component {
                                     <img src={googleIcon} alt='icon'/> GOOGLE
                                 </button>
                         </div>
-                    </div>)}
                     </div>
-
+                    )
+                }
+                    </div>
+                    <div className="cancel-button" onClick={this.props.closeAuthModalFunc}><i class="far fa-window-close"></i></div>
                 </div>
         );
     }

@@ -34,17 +34,20 @@ export default class LandingPage extends Component {
                 <div className="landing-page">
                     <div className="logo">metric</div>
                     <div style={styles.pathSvg}  className="path-div">
-                            <div className="phrase">
-                                <div className="large-phrase">“If you can't measure it,<br/>&nbsp;&nbsp;...You can't improve it"</div>
-                                    <div className="small-phrase"> Metric helps you keep track of your gym progress<br/>
+                    </div>
+                    <div className="content">
+                        <div className="catch-phrase">
+                            <div className="large-phrase">If you can't measure it,<br/>&nbsp;&nbsp;...You can't improve it</div>
+                                <div className="small-phrase"> Metric helps you keep track of your gym progress<br/>
                                     by giving you aggregated data about your workouts.
-                                    </div>
-                            </div>
+                                </div>
+
                             <div className="action-btns">
-                                    <div className="register-btn" onClick={() => (this.authActionFunc(true))}>Register</div>
-                                    <div className="login-btn" onClick={() => (this.authActionFunc(false))}>Login</div>
+                                <div className="register-btn" onClick={() => (this.authActionFunc(true))}>Register</div>
+                                <div className="login-btn" onClick={() => (this.authActionFunc(false))}>Login</div>
                             </div>
-                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className={`auth-container-${this.state.authPageVisibility}`}> 
                     <Auth userRegistration={this.state.userRegistration} closeAuthModalFunc={this.closeAuthModalFunc}/>

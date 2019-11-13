@@ -37,11 +37,11 @@ export default class LandingPage extends Component {
                             <div className="phrase">
                                 <div className="large-phrase">“If you can't measure it,<br/>&nbsp;&nbsp;...You can't improve it"</div>
                                     <div className="small-phrase"> Metric helps you keep track of your gym progress<br/>
-                                    And gives you aggregated data about your workouts.
+                                    by giving you aggregated data about your workouts.
                                     </div>
                             </div>
                             <div className="action-btns">
-                                    <button className="register-btn" onClick={() => (this.authActionFunc(true))}>Register</button>
+                                    <div className="register-btn" onClick={() => (this.authActionFunc(true))}>Register</div>
                                     <div className="login-btn" onClick={() => (this.authActionFunc(false))}>Login</div>
                             </div>
                             </div>

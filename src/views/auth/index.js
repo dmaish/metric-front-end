@@ -96,7 +96,7 @@ class Auth extends Component {
                     )
                 }
                     </div>
-                    <div className="cancel-button" onClick={this.props.closeAuthModalFunc}><i class="far fa-window-close"></i></div>
+                    <div className="cancel-button" onClick={this.props.closeAuthModalFunc}><i class="fas fa-times"></i></div>
                 </div>
         );
     }

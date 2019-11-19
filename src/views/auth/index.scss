@@ -79,6 +79,7 @@
             font-size: 15px;
             background: none;
             text-align: center;
+            font-weight: bold;
         }
         .auth-button {
             background-image: linear-gradient(to right,  #57d8f7, #03EDC9);
@@ -104,8 +105,9 @@
         }
     }
     img {
-        height: 20px;
-        width: 20px;
+        height: 25px;
+        width: 25px;
         vertical-align: middle;
+        margin-right: 1%;
     }
 }

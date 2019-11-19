@@ -16,7 +16,7 @@ export default class LandingPage extends Component {
     }
 
     authActionFunc = (registration) => {
-        if (!registration){
+        if (!registration) {
             this.setState(() => ({userRegistration: false}));
         } else if (registration) {
             this.setState(() => ({userRegistration: true}));

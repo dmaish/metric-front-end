@@ -1,12 +1,15 @@
 import React from 'react';
-import './index.scss';
-import googleIcon from '../../assets/google.png';
+import SimpleReactValidator from 'simple-react-validator';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
+import './index.scss';
+import googleIcon from '../../assets/google.png';
+
+
 const ADD_USER = gql `
-mutation AddUser($username: String!, $email: String!, $password: String!) {
-    addUser(username: $username, email: $email, password: $password){
+    mutation AddUser($username: String!, $email: String!, $password: String!) {
+        addUser(username: $username, email: $email, password: $password){
             username,
             email
         }
@@ -14,6 +17,7 @@ mutation AddUser($username: String!, $email: String!, $password: String!) {
 `
 
 const Auth = (props) => {
+    const validator = new SimpleReactValidator();
 
     const submitNewUser = (addUser) => {
         const mut = addUser ( { variables:  {

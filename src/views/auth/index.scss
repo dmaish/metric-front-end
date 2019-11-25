@@ -1,3 +1,4 @@
+
 .auth-modal {
     position: absolute;
     background-color: white;
@@ -20,13 +21,13 @@
         width: 100%;
         height: 100%;
         z-index: 5;
-        // left: 50%;
         border-bottom-right-radius: 3px;
         border-top-right-radius: 3px;
         background: linear-gradient(to right bottom, rgba(0, 246, 209, 0.8) , rgba(43, 159, 236, 1), rgba(47,70,228,1), rgba(78,50,241,1));  
     }
 
     .register-div, .login-div {
+
         position: relative;
         top: 10%;
         .title {
@@ -44,6 +45,19 @@
         .input-container {
             text-align: center;
             margin-top: 6%;
+
+            .input-error-div {
+                position: absolute;
+                z-index: 2;
+                text-align: right;
+                width: 70%;
+                margin: 0 auto;
+                color: #ff2400;
+                font-size: 1.7vh;
+                left: 50%;
+                transform: translate(-50%, -100%);
+                text-align: right;
+            }
         }
         input {
             width: 67%;
@@ -82,8 +96,20 @@
             font-weight: bold;
         }
 
+
         .auth-button {
-            background-image: linear-gradient(to right,  #57d8f7, #03EDC9);
+            border-radius: 2px;
+            margin: 10px;
+            padding: 1em 3em;
+            background-size: 200% auto;
+            color: white;
+            box-shadow: 0 4px 6px rgba(61, 61, 133, 0.11), 0 1px 3px rgba(83, 23, 23, 0.08);
+            background-image: linear-gradient(to right,  #57d8f7 0%, #ab8ff8  50%, #57d8f7 100%);
+            
+            &:hover {
+            background-position: right center;
+            transition: 0.5s;
+            }  
         }
 
 
@@ -113,4 +139,5 @@
         vertical-align: middle;
         margin-right: 1%;
     }
+
 }

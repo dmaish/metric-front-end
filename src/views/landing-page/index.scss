@@ -1,3 +1,18 @@
+@keyframes bounce {
+    0% {
+      transform: scale(1, 1)
+    }
+    35% {
+      transform: scale(1.1, 0.9)
+    }
+    65% {
+      transform: scale(0.9, 1.1)
+    }
+    100% {
+      transform: scale(1)
+    }
+  }
+    
     .landing-page {
         width: 100vw;
         height: 100vh;
@@ -9,14 +24,19 @@
         grid-template-rows: 10% 90% ;
 
         .logo {
-            position: relative;
             grid-area: logo;
-            display: inline-block;
-            font-family: 'Simonetta', cursive;
-            color: #6A4CAD;
-            font-size: 1.8em;
-            left: 10%;
-            top: 20%;
+
+            .logo-div {
+                position: relative;
+                height: 80%;
+                width: 22%;
+                background-size: contain ;
+                display: inline-block;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                left: 15%;
+                top: 20%;
+            }
         }
 
         .path-div {
@@ -37,7 +57,7 @@
                 color: #6A4CAD;
                 width: 67%;
                 margin: 0 auto;
-                top: 17vh;
+                top: 22vh;
 
                 .large-phrase {
                     font-size: 3.7vw;
@@ -70,6 +90,11 @@
                         cursor: pointer;
                         margin-right: 25%;
                         border: solid  rgb(157, 125, 226) 1.5px;
+
+                        &:hover {
+                            animation: .6s bounce
+                            }
+
                     }
 
                     .login-btn {
@@ -81,38 +106,15 @@
                         width: 35%;
                         border: solid  rgb(157, 125, 226) 1.5px;
                         cursor: pointer;
+
+                        &:hover {
+                            animation: .6s bounce
+                            }
+
                     }
 
                 }
             }
-//             top: 31%;
-//             font-size: 1.5em;
-//             text-align: left;;
-
-//             .small-phrase {
-//                 font-style: oblique;
-//                 margin-top: 0.5%;
-//             }
-//             .action-btns {
-//                 width: 60%;
-//                 top: 35%;
-//                 font-size: 0.6em;
-//                 display: flex;
-//                 justify-content: space-between; 
-//                 border: black 2px solid;
-    
-//                 .register-btn {
-//                     display: inline-block;
-//                     width: 40%;
-//                 }
-                // .login-btn {
-                //     display: inline-block;
-                //     width: 40%;
-                //     border: solid  rgb(157, 125, 226) 1.5px;
-                // }
-//             }
-//         }
-//     }
 
     }
 

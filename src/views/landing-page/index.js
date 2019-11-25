@@ -1,11 +1,16 @@
 import React, {Component} from 'react';
+
 import landingPageBG from '../../assets/landingPageBG.svg';
+import LogoBG from '../../assets/metricAppLogo.svg';
 import Auth from './../auth';
 import './index.scss'
 
 const styles = {
     pathSvg: {
         backgroundImage: `url(${landingPageBG})`
+    },
+    LogoSvg: {
+        backgroundImage: `url(${LogoBG})`
     }
 }
 
@@ -32,7 +37,10 @@ export default class LandingPage extends Component {
         return(
             <>
                 <div className="landing-page">
-                    <div className="logo">metric</div>
+                        <div  className="logo">
+                            <div style={styles.LogoSvg} className="logo-div"></div>
+                        </div>
+                    
                     <div style={styles.pathSvg}  className="path-div">
                     </div>
                     <div className="content">
